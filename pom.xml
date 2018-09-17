@@ -107,12 +107,27 @@
                 <artifactId>jackson-datatype-jsr310</artifactId>
                 <version>${jackson.version}</version>
             </dependency>
+            <dependency>
+                <groupId>org.lognet</groupId>
+                <artifactId>grpc-spring-boot-starter</artifactId>
+                <version>${grpc-spring-boot-starter.version}</version>
+            </dependency>
 
             <!-- Protocol Buffers -->
             <dependency>
                 <groupId>com.google.protobuf</groupId>
                 <artifactId>protobuf-java</artifactId>
                 <version>${proto.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.grpc</groupId>
+                <artifactId>grpc-protobuf</artifactId>
+                <version>${grpc.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.grpc</groupId>
+                <artifactId>grpc-stub</artifactId>
+                <version>${grpc.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.google.protobuf</groupId>
@@ -245,6 +260,8 @@
         <proto.version>3.6.1</proto.version>
         <protobuf-java-format.version>1.4</protobuf-java-format.version>
         <jackson-dataformat-protobuf.version>2.9.6</jackson-dataformat-protobuf.version>
+        <grpc-spring-boot-starter.version>2.3.2</grpc-spring-boot-starter.version>
+        <grpc.version>1.15.0</grpc.version>
 
     </properties>
 

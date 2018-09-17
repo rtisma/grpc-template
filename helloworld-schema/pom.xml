@@ -29,6 +29,14 @@
                 <groupId>com.google.protobuf</groupId>
                 <artifactId>protobuf-java</artifactId>
             </dependency>
+        <dependency>
+            <groupId>io.grpc</groupId>
+            <artifactId>grpc-protobuf</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>io.grpc</groupId>
+            <artifactId>grpc-stub</artifactId>
+        </dependency>
     </dependencies>
 
     <build>
@@ -57,16 +65,16 @@
                 <version>${protobuf-maven-plugin.version}</version>
                 <configuration>
                     <protocArtifact>com.google.protobuf:protoc:${proto.version}:exe:${os.detected.classifier}</protocArtifact>
-                    <protoSourceRoot>${project.build.directory}/helloworld-schema/main/proto</protoSourceRoot>
-                    <outputDirectory>${project.build.directory}/generated-sources/java</outputDirectory>
+                    <pluginId>grpc-java</pluginId>
+                    <pluginArtifact>io.grpc:protoc-gen-grpc-java:${grpc.version}:exe:${os.detected.classifier}</pluginArtifact>
                 </configuration>
                 <executions>
                     <execution>
-                        <id>compile-helloworld-schemas</id>
+                        <id>compile-song-schemas</id>
                         <phase>generate-sources</phase>
                         <goals>
                             <goal>compile</goal>
-                            <goal>test-compile</goal>
+                            <goal>compile-custom</goal>
                         </goals>
                     </execution>
                 </executions>

@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+
+package org.icgc.dcc.helloworld.schema;
+import "org/icgc/dcc/helloworld/schema/helloworld.proto";
+
+service Greeter {
+    rpc SayHello( HelloWorldRequest) returns (HelloWorldResponse){}
+}

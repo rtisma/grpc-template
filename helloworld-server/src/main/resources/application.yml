@@ -31,6 +31,18 @@ management:
 swagger:
   alternateUrl: "/api-docs"
 
+# Datasource
+spring:
+  datasource:
+    initialization-mode: never
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost/test?stringtype=unspecified
+    username:
+    password:
+    max-active: 10
+    max-idle: 1
+    min-idle: 1
+
 
 
 auth:
