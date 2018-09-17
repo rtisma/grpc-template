@@ -1,0 +1,21 @@
+
+// This defines the file object
+
+syntax = "proto3";
+
+
+package org.icgc.dcc.helloworld.schema;
+import "google/protobuf/struct.proto";
+
+// Represents the File object
+message GreetingMessage{
+    string firstname = 1;
+    string lastname = 2;
+    google.protobuf.Struct info = 3;
+}
+
+message GreetingResponse{
+    string response = 1;
+}
+
+
